@@ -11,7 +11,7 @@ public class Kamera {
 
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE)
-    private int kameraId;
+    private int id;
     private String kameramodell;
     private Hersteller hersteller;
     private String sensorformat;
@@ -28,12 +28,12 @@ public class Kamera {
         this.anzahlPixel = anzahlPixel;
     }
 
-    public int getKameraId() {
-        return kameraId;
+    public int getId() {
+        return id;
     }
 
-    public void setKameraId(int kameraId) {
-        this.kameraId = kameraId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getKameramodell() {
@@ -70,12 +70,12 @@ public class Kamera {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.kameraId, this.kameramodell, this.sensorformat, this.anzahlPixel);
+        return Objects.hash(this.id, this.kameramodell, this.sensorformat, this.anzahlPixel);
     }
 
     @Override
     public String toString() {
-        return "Kamera{" + "kameraId=" + this.kameraId +
+        return "Kamera{" + "id=" + this.id +
                 ", kameramodell='" + this.kameramodell + '\'' +
                 ", hersteller='" + this.hersteller.value() + '\'' +
                 ", sensorformat='" + this.sensorformat + '\'' +

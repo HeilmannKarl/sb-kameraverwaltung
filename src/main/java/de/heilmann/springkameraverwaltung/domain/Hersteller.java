@@ -1,5 +1,8 @@
 package de.heilmann.springkameraverwaltung.domain;
 
+/**
+ * Enum Hersteller, definiert die Liste der Hersteller, der im Bestand vorhandenen Kameras.
+ */
 public enum Hersteller {
 
     CANON("Canon"),

@@ -15,6 +15,9 @@ public class KameraRestApi {
     @Autowired
     private KameraRepositoryI repository;
 
+    /**
+     * @return Liefert eine Liste von JSON Objekten, mit allen Kameras im Bestand
+     */
     @GetMapping("/kamera")
     public List<Kamera> listeAllerKameras() {
 
