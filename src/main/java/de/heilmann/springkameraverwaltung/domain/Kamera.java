@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 @Entity
 public class Kamera {
@@ -16,7 +17,7 @@ public class Kamera {
     private String sensorformat;
     private String anzahlPixel;
 
-    protected Kamera() {
+    public Kamera() {
     }
 
     public Kamera(String kameramodell, Hersteller hersteller, String sensorformat, String anzahlPixel) {
@@ -65,5 +66,20 @@ public class Kamera {
 
     public void setAnzahlPixel(String anzahlPixel) {
         this.anzahlPixel = anzahlPixel;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.kameraId, this.kameramodell, this.sensorformat, this.anzahlPixel);
+    }
+
+    @Override
+    public String toString() {
+        return "Kamera{" + "kameraId=" + this.kameraId +
+                ", kameramodell='" + this.kameramodell + '\'' +
+                ", hersteller='" + this.hersteller.value() + '\'' +
+                ", sensorformat='" + this.sensorformat + '\'' +
+                ", anzahlPixel='" + this.anzahlPixel + '\'' +
+                '}';
     }
 }
