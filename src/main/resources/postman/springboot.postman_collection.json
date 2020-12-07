@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "6845b4ed-18e9-4958-9716-e609eef25d21",
+		"name": "springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hole alle Kameras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/kameras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kameras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hole eine Kamera",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/kameras/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kameras",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "erzeuge kamera",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"kameramodell\":\"5D MARK III\",\"hersteller\":\"CANON\",\"sensorformat\":\"KB\",\"anzahlPixel\":\"22\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/kameras",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kameras"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
